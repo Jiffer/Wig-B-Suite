@@ -28,7 +28,8 @@ int mode = 0;
 // 0 = pause, 1 = run, 2 = finished
 unsigned long sequence[][2] = {
   {300000, 0}, // 30000 = start in 30 sec 300000 = 5 min
-  {360000, 1}, // run 6 min.
+  {180000, 0}, // wait 3 min
+  {180000, 1}, // run 6 min.
   {180000, 0}, // 3 min pause
   {180000, 1}, // 3 min run
   {2000, 2}};
@@ -113,4 +114,5 @@ void backUpAndLook() {
   backward(LOWSPEED);
   while (!LT_M) {
   }
+  delay(20);
 }

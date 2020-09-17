@@ -25,19 +25,12 @@ unsigned long performanceTimer = 0;
 int mode = 0;
 
 // 0 = pause, 1 = run, 2 = finished
-//unsigned long sequence[][2] = {
-//  {300000, 0}, // start in 30 sec
-//  {720000, 1}, // run  minutes
-//  {0, 2}
-//};
 unsigned long sequence[][2] = {
-  {8000, 0}, // initial pause
-  {300000, 1}, // 5 min
-  {240000, 1}, // run 4 minutes
-  {60000, 0}, // pause 1 minute
-  {120000, 1}, // run 2 minutes
-  {0, 2}
+  {300000, 0}, // start in 30 sec
+  {720000, 1}, // run 12 minutes
+  {5000, 2}
 };
+
 int movement = 0;
 //bool lastDirection; // 0 = forward, 1 = backward, 2 = left, 3 = right
 

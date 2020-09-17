@@ -11,9 +11,9 @@
 #define IN3 9
 #define IN4 11
 
-#define HIGHSPEED 115
+#define HIGHSPEED 115 // max is 255
 #define MIDSPEED 80
-#define LOWSPEED 50
+#define LOWSPEED 75
 
 int currentSpeed = HIGHSPEED;
 bool goingForward = true;
@@ -25,14 +25,9 @@ unsigned long performanceTimer = 0;
 int mode = 0;
 
 // 0 = pause, 1 = run, 2 = finished
-//unsigned long sequence[][2] = {
-//  {300000, 0}, // start in 30 sec
-//  {720000, 1}, // run  minutes
-//  {0, 2}
-//};
 unsigned long sequence[][2] = {
-  {8000, 0}, // initial pause
-  {300000, 1}, // 5 min
+  {300000, 0}, // initial pause 5 min = 5 * 60 * 1000ms = 300,000
+  {300000, 0}, // 5 min
   {240000, 1}, // run 4 minutes
   {60000, 0}, // pause 1 minute
   {120000, 1}, // run 2 minutes
